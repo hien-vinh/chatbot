@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+	<script src="{{ url_for('static', filename='javascript/jvs.js') }}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdn.webrtc-experiment.com/RecordRTC.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+</head>
+
+<body>
+	<h1 style="color: rgb(202, 22, 22); text-align: center; margin: 10px; margin-top: 10px;">
+		ChatABC
+	</h1>
+	<div class="container">
+		<div class="chat-box">
+			<label for="output-method"><u class="underline">Choose output method:</u></label>
+			<select id="output-method" name="output-method">
+				<option value="text">Text</option>
+				<option value="voice">Text and Voice</option>
+			</select>
+
+			<div id="chatLog"></div>
+			<div id="audio-player"></div>
+			<div class="form-wrapper">
+				<div class="form">
+					<input type="text" id="get.message" placeholder="Type your message..."
+						onkeydown="if(event.keyCode===13) sendMessage()">
+					<button class="record_button" onclick="toggleRecording()" id="record-button">Start
+						Recording</button>
+					<div id="recording-indicator"></div>
+					<button class="send_button" onclick="sendMessage()">Send</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
