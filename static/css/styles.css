@@ -1,0 +1,157 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: left;
+    height: 100vh;
+    font-size: large;
+}
+
+.chat-box {
+    width: 70%;
+    height: 80%;
+    background-color: #f2f6f9;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    overflow: auto;
+    padding: 10px;
+}
+
+
+.underline{
+    color: rgb(227, 21, 21);
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+#output-method {
+    background-color: #f2f6f9;
+    font-size: large;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.message {
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse; /* đảo thứ tự các thành phần */
+    justify-content: flex-end; /* đưa user_logo lên bên phải */
+}
+
+.user_logo {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: xx-large;
+    order: 2;
+}
+
+.bot_logo {
+    font-weight: bold;
+    color: #4CAF50;
+    font-size: xx-large;
+    order: 2;
+}
+
+img {
+    border-radius: 100%;
+}
+
+.user_text {
+    margin-right: 10px;
+    margin-left: auto;
+    max-width: 70%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    order: 2;
+}
+
+.bot_text {
+    margin-left: 10px;
+    max-width: 70%;
+    background-color: rgb(210, 220, 244);
+    padding: 10px;
+    border-radius: 10px;
+    order: 1;
+    white-space: pre-wrap;
+}
+
+.form {
+    display: flex;
+    margin-top: 10px;
+    align-self: flex-end;
+}
+
+.form input[type="text"] {
+    flex-grow: 1;
+    border-radius: 3px;
+    padding: 5px 10px;
+    border: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: large;
+}
+
+.record_button {
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #af4c4c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: large;
+}
+
+.send_button {
+    margin-left: 10px;
+    border-radius: 3px;
+    padding: 5px 10px;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: large;
+}
+
+/* adjust the size of the web page to fit the screen without scrolling */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#recording-indicator {
+    align-items: right;
+    display: none;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(255, 42, 0);
+    animation: pulse 1s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+
+    50% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(0.8);
+        opacity: 0.7;
+    }
+}
