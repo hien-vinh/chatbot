@@ -1,0 +1,14 @@
+To host the web application locally:
+1. Repace 'YOUR_API_KEY' in app.py with your secret OpenAI's key.
+2. Set up a virtual environment:
+  2.1. In Windows Command Prompt, navigate to the chatbot directory.
+  2.2. Create a new venv:
+    python -m venv myenv
+  2.3. Activate the virtual environment
+    myenv\Scripts\activate
+  2.4. Install required libraries (make sure you have pip installed with Python)
+    pip install -r requirements.txt
+  2.5. Start your web application:
+    python app.py
+  2.6 To exit:
+    deactivate
